@@ -1,0 +1,176 @@
+.gooded {
+    color: pink;
+  }
+  .admin_menu{
+  display: flex;
+}
+  table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70%;
+  }
+  
+  table th:first-child{
+    border-radius: 3px 0 0 0;
+    width: 3%;
+}
+  
+  table th:last-child{
+    border-radius: 0 3px 0 0;
+    border-right: 1px solid #3c6690;
+    width: 4%;
+}
+  
+table tr:nth-child(2n-1){
+    text-align: center;
+    color:white;
+    background: linear-gradient(#829ebc,#225588);
+    border-left: 1px solid #3c6690;
+    border-top: 1px solid #3c6690;
+    border-bottom: 1px solid #3c6690;
+    box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+    padding: 10px 0;
+}
+
+table tr:nth-child(2n){
+    text-align: center;
+    color:white;
+    background: #229977;
+    border-left: 1px solid #3c6690;
+    border-top: 1px solid #3c6690;
+    border-bottom: 1px solid #3c6690;
+    box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+    padding: 10px 0;
+}
+
+table th:nth-child(2){
+    width: 5%;
+    border-left: 1px solid #a8b7c5;
+    border-right: 1px solid #a8b7c5;
+}
+
+table th:nth-child(3){
+    width: 7%;
+    border-left: 1px solid #a8b7c5;
+    border-right: 1px solid #a8b7c5;
+}
+
+table th:nth-child(4){
+    width: 7%;
+    border-left: 1px solid #a8b7c5;
+    border-right: 1px solid #a8b7c5;
+}
+
+table th:nth-child(5){
+    width: 8%;
+    border-left: 1px solid #a8b7c5;
+    border-right: 1px solid #a8b7c5;
+}
+
+table th:nth-child(6){
+    width: 57%;
+    border-left: 1px solid #a8b7c5;
+    border-right: 1px solid #a8b7c5;
+}
+
+table th:nth-child(7){
+    width: 5%;
+    border-left: 1px solid #a8b7c5;
+    border-right: 1px solid #a8b7c5;
+}
+
+table th:nth-child(8){
+    width: 4%;
+    border-left: 1px solid #a8b7c5;
+    border-right: 1px solid #a8b7c5;
+}
+
+  
+  
+table td{
+    text-align: center;
+    border-left: 1px solid #a8b7c5;
+    border-bottom: 1px solid #a8b7c5;
+    border-top:none;
+    box-shadow: 0px -3px 5px 1px #eee inset;
+    width: 25%;
+    padding: 10px 0;
+}
+  
+table td:last-child{
+    border-right: 1px solid #a8b7c5;
+}
+  
+table tr:last-child td:first-child {
+    border-radius: 0 0 0 5px;
+}
+  
+table tr:last-child td:last-child {
+    border-radius: 0 0 5px 0;
+}
+h1{
+  text-align: center;
+}
+h2{
+  text-align: center;
+}
+h3{
+  text-align: center;
+}
+.alink{
+  text-align: center;
+}
+.top{
+  text-align: right;
+  margin-right: 50px;
+}
+.navbar-nav{
+  text-align: right;
+  margin-right: 50px;
+}
+.migration{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.data{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.info{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.card-body{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.card-header{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.gazou img{
+  width: 70%;
+}
+textarea{
+  resize: none;
+  width: 50%;
+  height: 500px;
+}
+.dropdown-menu{
+  margin-left: auto;
+  margin-right: 5%;
+}
+.admin{
+  text-align: left;
+  margin-left: 5%;
+}
