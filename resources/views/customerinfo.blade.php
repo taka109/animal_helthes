@@ -9,7 +9,7 @@
 <body>
     @include('header')
     <h2>{{$customers->title}}</h2> 
-    <div class ="">
+    <div class ="data">
         <p>内容</p>
         {{$customers->body}}
     </div>
