@@ -13,11 +13,11 @@
         <p>内容</p>
         {{$customers->body}}
     </div>
-    <div class = "">
+    <div class = "data">
         <p>返信一覧</p>
     </div>
-    <div class ="">
-        <table class = "">
+    <div class ="data">
+        <table class = "data">
             <tr>
                 <th>返信日</th>
                 <th>詳細</th>
@@ -41,7 +41,7 @@
       {{$replies->links('vendor.pagination.semantic-ui')}}
     </div>
     </div>
-    <div class ="">
+    <div class ="data">
         <a href = "customerlist">相談一覧ページへ</a><br>
         <form action = 'customerreply' method = 'post'>
              @csrf
