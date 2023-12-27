@@ -14,7 +14,7 @@
     @if(session('adminmsg'))
     {{ Session('adminmsg') }}<br />
     @endif
-    <div class ="">
+    <div class ="data">
         <a href = "userlist">ユーザー一覧へ</a>
     </div>
 </body>

@@ -9,7 +9,9 @@
 <body>
     @include('header')
     <h3>登録完了</h3>
-    <a href ="mypage">登録完了</a>
+    <div class="data">
+       <a href ="mypage">登録完了</a> 
+    </div>
     @include('footer')
 </body>
 </html>

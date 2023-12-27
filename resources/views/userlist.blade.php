@@ -26,7 +26,7 @@
                 @csrf
                     <input type="hidden" name="id" value="{{$user->id}}">
                     <input type='hidden' name = 'deleted_at' value = "1">
-                    <input type="submit" class="btn btn-danger btn-dell" value="削除">
+                    <input type="submit" class="btn btn-danger btn-dell" value="削除" onclick='return confirm("消去しますか？");'>
                 </form>
             </td>
         </tr>

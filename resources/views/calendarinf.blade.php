@@ -9,15 +9,15 @@
 <body>
     @include('header')
     <h3>{{$pets->date}}</h3>
-    <div class ="">
+    <div class ="data">
         <h3>ごはん</h3>
         <p>{{$pets->eat}}回</p>    
     </div>
-    <div class ="">
+    <div class ="data">
         <h3>備考</h3>
         {{$pets->body}}
     </div>
-    <div class = "">
+    <div class = "data">
         <a href = "mypage">マイページへ</a>
     </div>
     @include('footer')

@@ -9,7 +9,9 @@
 <body>
     @include('header')
     <h2>消去完了</h2>
-    <a href ="mycustomer">投稿済みの相談</a>
+    <div class ="data">
+        <a href ="mycustomer">投稿済みの相談</a>
+    </div>
     @include('footer')
 </body>
 </html>

@@ -20,14 +20,14 @@ class ViewController extends Controller
     public function index(Request $request) {
         // $publice = new Publices();
         $sort = $request->sort;
-        $publices = Publices::withCount('likes')->orderBy('id', 'desc')->paginate(10);
+        $publices = Publices::where('deleted_at',0)->withCount('likes')->orderBy('id', 'desc')->paginate(10);
         $param = [
             'publices' => $publices,
         ];
         // $publices = $publice ->select();
         return view('index', compact('publices', 'sort','param'));
     }
-
+    //postに遷移
     public function post(Request $request){
         $publice = new Publices();
         $publices = $publice->post($request);
@@ -43,7 +43,8 @@ class ViewController extends Controller
     //管理者がユーザー一覧に遷移
     public function userlist(){
         $user = new Users();
-        $users = $user->select();
+        $users = Users::where('deleted_at',null)->orderBy('id', 'desc')->paginate(10);
+        //$users = $user->select();
         return view('userlist', compact('users'));
     }
     //petsubに遷移
@@ -85,19 +86,19 @@ class ViewController extends Controller
         $pets = $pet ->pets_data();
         return view('newCustomers',compact('results','pets'));
     }
-    //myCustomersに遷移
-    public function myCustomers(Request $request){
-        $publice = new Publices();
-        $sort = $request->sort;
-        $publices = Publices::paginate(10);
-        // $publices = $publice ->select();
-        return view('mycustomers',compact('publices', 'sort'));
-    }
+    // //myCustomersに遷移
+    // public function myCustomers(Request $request){
+    //     $customer = new Customers();
+    //     $sort = $request->sort;
+    //     $customers = DB::table('customers')->where('deleted_at',0)->orderBy('id', 'desc')->paginate(10);
+    //     // $publices = $publice ->select();
+    //     return view('mycustomers',compact('customers', 'sort'));
+    // }
     //datelistに遷移
     public function datelist(Request $request){
         $date = new Pets_helthes();
         $sort = $request->sort;
-        $dates = Pets_helthes::paginate(10);
+        $dates =  DB::table('pets_helth')->where('deleted_at',0)->where('users_id',auth()->id())->orderBy('id', 'desc')->paginate(10);
         // $dates = $date->select();
         return view('datelist',compact('dates', 'sort'));              
     }
@@ -105,7 +106,7 @@ class ViewController extends Controller
     public function customerlist(Request $request){
         $customer = new Customers();
         $sort = $request->sort;
-        $customers = DB::table('customers')->paginate(10);
+        $customers = DB::table('customers')->where('deleted_at',0)->paginate(10);
         // $customers = $customer->select();
         return view('customerlist', compact('customers', 'sort'));
     }
@@ -117,10 +118,10 @@ class ViewController extends Controller
         $query = Customers::query();
             //もしキーワードがあったら
         if(!empty($keyword)){
-            $customers = DB::table('customers')->where('title','like','%'.$keyword.'%')->orderBy('created_at','desc')->paginate(10);
+            $customers = DB::table('customers')->where('title','like','%'.$keyword.'%')->where('deleted_at',0)->orderBy('created_at','desc')->paginate(10);
         }elseif(empty($keyword)){
             //ページネーション
-            $customers = DB::table('customers')->orderBy('created_at','desc')->paginate(10);
+            $customers = DB::table('customers')->where('deleted_at',0)->orderBy('created_at','desc')->paginate(10);
         }
             
         return view('customerlist', compact('customers'));
@@ -130,7 +131,7 @@ class ViewController extends Controller
     public function mycustomer(Request $request){
         $customer = new Customers();
         $sort = $request->sort;
-        $customers = DB::table('customers')->paginate(10);
+        $customers =  DB::table('customers')->where('deleted_at',0)->where('users_id',auth()->id())->orderBy('id', 'desc')->paginate(10);
         return view('mycustomer', compact('customers','sort'));
     }
     
@@ -144,7 +145,7 @@ class ViewController extends Controller
         $customers = $customer->detail($request);
         $reply = new Replies();
         $sort = $request->sort;
-        $replies = Replies::paginate(10);
+        $replies = Replies::where('deleted_at',0)->orderBy('id', 'desc')->paginate(10);
         // $replies = $reply->select();
         return view('customerinfo',compact('customers','replies', 'sort'));
     }
@@ -178,9 +179,9 @@ class ViewController extends Controller
     public function mypost(Request $request){
         $publice = new Publices();
         $sort = $request->sort;
-        $publices = Publices::paginate(10);
+        $publices = Publices::where('deleted_at',0)->where('users_id',auth()->id())->orderBy('id', 'desc')->paginate(10);
         // $publices = $publice ->select();
-        return view('mypost', compact('publices', 'sort'));
+        return view('mypost', compact('publices'));
     }
     //日記詳細
     public function dateinfo(Request $request){

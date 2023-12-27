@@ -9,7 +9,9 @@
 <body>
 @include('header')
     <h2>消去完了</h2>
-    <a href ="datelist">日記一覧</a>
+    <div class ="data">
+        <a href ="datelist">日記一覧</a>
+    </div>
     @include('footer')
 </body>
 </html>

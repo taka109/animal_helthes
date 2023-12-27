@@ -33,7 +33,7 @@
               @csrf
               <input type='hidden' name = 'id' value = "{{$publice->id}}">
               <input type='hidden' name = 'deleted_at' value = "1">
-              <input type='submit'name='send' value='消去' class = 'send'>
+              <input type='submit'name='send' value='消去' class = 'send'  onclick='return confirm("消去しますか？");'>
           </form>
         </td>
       </tr>

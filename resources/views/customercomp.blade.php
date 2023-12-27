@@ -9,7 +9,7 @@
 <body>
     @include('header')
     <h2>相談完了</h2>
-    <div class ="">
+    <div class ="data">
         <a href ="customerlist">相談一覧ページへ</a>
     </div>
     @include('footer')

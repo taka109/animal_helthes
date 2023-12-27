@@ -48,10 +48,16 @@ class Publices extends Model
         $publices = DB::table('publices')->insert($param);
         return $publices;
     }
-    //users_idを指定して表示
+    //idを指定して表示
     public function post($request){
         $id = $request->get('id');
         $publices = DB::table('publices')->find($id);
+        return $publices;
+    }
+    //user_idを取得して表示
+    public function mypost(){
+        $id = auth()->id();
+        $publices = DB::table('publices')->where('users_id',$id)->where('deleted_at',0)->get();
         return $publices;
     }
     //idを取得して論理消去

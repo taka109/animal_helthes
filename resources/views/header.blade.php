@@ -1,5 +1,5 @@
 <header>
-    <div class="navbar-nav ms-auto">
+    <div class="navbar-nav ms-auto dropdown-menu">
         <!-- Authentication Links -->
         @guest
         @if (Route::has('login'))

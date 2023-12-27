@@ -8,7 +8,7 @@
 </head>
 <body>
     <h2>アカウント消去完了</h2>
-    <div class = "">
+    <div class = "data">
         <a href = "index">トップページへ</a>
     </div>
 </body>

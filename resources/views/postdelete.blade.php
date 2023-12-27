@@ -9,7 +9,7 @@
 <body>
     @include('header')
     <h2>消去完了</h2>
-    <div class = "">
+    <div class = "data">
         <a href = "mypost">投稿一覧へ</a>
     </div>
     @include('footer')

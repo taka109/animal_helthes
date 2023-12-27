@@ -8,7 +8,7 @@
 </head>
 <body>
     <h2>投稿完了</h2>
-    <div class = "">
+    <div class = "data">
         <a href = "customerlist">相談一覧ページへ</a>
     </div>
 </body>

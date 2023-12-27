@@ -9,7 +9,7 @@
 <body>
     @include('header')
     <h2>ペット編集完了</h2>
-    <div class = "">
+    <div class = "data">
         <a href = "mypage">マイページへ</a>
     </div>
     @include('footer')
